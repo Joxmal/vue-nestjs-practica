@@ -11,63 +11,62 @@ import {
 
 const components: { title: string, href: string, description: string }[] = [
   {
-    title: 'Alert Dialog',
+    title: 'Explora nuestras bellas playas',
     href: '/docs/primitives/alert-dialog',
     description:
-      'A modal dialog that interrupts the user with important content and expects a response.',
+      'Inauguracion nueva cancha',
   },
   {
-    title: 'Hover Card',
+    title: 'Descubre la historia en nuestro casco antiguo',
     href: '/docs/primitives/hover-card',
     description:
-      'For sighted users to preview content available behind a link.',
+    'Sumérgete en el encanto de nuestras calles llenas de historia.',
   },
   {
-    title: 'Progress',
+    title: 'Excursión a la montaña',
     href: '/docs/primitives/progress',
     description:
-      'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.',
+      ' conquista la cima y disfruta de vistas panorámicas.',
   },
   {
-    title: 'Scroll-area',
+    title: 'Saborea nuestra gastronomía local',
     href: '/docs/primitives/scroll-area',
-    description: 'Visually or semantically separates content.',
+    description: ' Deléitate con los sabores auténticos de nuestra región.',
   },
   {
-    title: 'Tabs',
+    title: 'Ruta de vinos',
     href: '/docs/primitives/tabs',
     description:
-      'A set of layered sections of content—known as tab panels—that are displayed one at a time.',
+      'Descubre la excelencia enológica de nuestro municipio.',
   },
   {
-    title: 'Tooltip',
+    title: 'Festival cultural',
     href: '/docs/primitives/tooltip',
     description:
-      'A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.',
+      'Sumérgete en la riqueza cultural de nuestro municipio.',
   },
 ]
 </script>
 
 <template>
-  <NavigationMenu>
+  <NavigationMenu :delayDuration="100">
     <NavigationMenuList>
       <NavigationMenuItem>
-        <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+        <NavigationMenuTrigger>Eventos</NavigationMenuTrigger>
         <NavigationMenuContent>
           <ul class="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[minmax(0,.75fr)_minmax(0,1fr)]">
             <li class="row-span-3">
               <NavigationMenuLink as-child>
                 <a
                   class="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                  href="/"
+                  href=""
                 >
-                  <img src="https://www.radix-vue.com/logo.svg" class="h-6 w-6">
+                  <img src="https://th.bing.com/th/id/OIP.WaqW0QETJaVbvx-ZgrU4iAHaFh?rs=1&pid=ImgDetMain" class="border-4 rounded-lg  ">
                   <div class="mb-2 mt-4 text-lg font-medium">
-                    shadcn/ui
+                    Ultimo Evento
                   </div>
                   <p class="text-sm leading-tight text-muted-foreground">
-                    Beautifully designed components built with Radix UI and
-                    Tailwind CSS.
+                    Ultimo evento echo por la alcaldia 
                   </p>
                 </a>
               </NavigationMenuLink>
@@ -79,9 +78,9 @@ const components: { title: string, href: string, description: string }[] = [
                   href="/docs"
                   class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                 >
-                  <div class="text-sm font-medium leading-none">Introduction</div>
+                  <div class="text-sm font-medium leading-none">Lista de eventos</div>
                   <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                    Re-usable components built using Radix UI and Tailwind CSS.
+                    Todos Los eventos
                   </p>
                 </a>
               </NavigationMenuLink>
@@ -92,9 +91,9 @@ const components: { title: string, href: string, description: string }[] = [
                   href="/docs/installation"
                   class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                 >
-                  <div class="text-sm font-medium leading-none">Installation</div>
+                  <div class="text-sm font-medium leading-none">Curiosidades</div>
                   <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                    How to install dependencies and structure your app.
+                    Preguntas y respuesta habituales
                   </p>
                 </a>
               </NavigationMenuLink>
@@ -105,9 +104,9 @@ const components: { title: string, href: string, description: string }[] = [
                   href="/docs/primitives/typography"
                   class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                 >
-                  <div class="text-sm font-medium leading-none">Typography</div>
+                  <div class="text-sm font-medium leading-none">patrocinadores</div>
                   <p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                    Styles for headings, paragraphs, lists...etc
+                    Lista de patrocinadores y logos.
                   </p>
                 </a>
               </NavigationMenuLink>
@@ -115,9 +114,10 @@ const components: { title: string, href: string, description: string }[] = [
           </ul>
         </NavigationMenuContent>
       </NavigationMenuItem>
-      <NavigationMenuItem>
-        <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-        <NavigationMenuContent>
+
+      <NavigationMenuItem >
+        <NavigationMenuTrigger>Noticias</NavigationMenuTrigger>
+        <NavigationMenuContent >
           <ul class="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
             <li v-for="component in components" :key="component.title">
               <NavigationMenuLink as-child>
@@ -135,9 +135,10 @@ const components: { title: string, href: string, description: string }[] = [
           </ul>
         </NavigationMenuContent>
       </NavigationMenuItem>
+      
       <NavigationMenuItem>
-        <NavigationMenuLink href="/docs" :class="navigationMenuTriggerStyle()">
-          Documentation
+        <NavigationMenuLink href="https://www.radix-vue.com/logo.svg" :class="navigationMenuTriggerStyle()">
+          Contacto
         </NavigationMenuLink>
       </NavigationMenuItem>
     </NavigationMenuList>

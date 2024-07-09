@@ -15,15 +15,41 @@ import {
   navigationMenuTriggerStyle
 
 } from '@/components/ui/navigation-menu'
+import CarruselBasic from './components/carrusel/CarruselBasic.vue'
+import CardBasic from './components/card/CardBasic.vue'
 
 </script>
 
 <template>
-    <Button>Click me</Button>
-
-    <ButtomDarkMode></ButtomDarkMode>
+  <body class="flex flex-col max-w-screen-xl px-8 bg-red-500 min-h-screen">
     
-  <MenuDrop/>
+    <header class="flex justify-center items-center">
+        <MenuDrop
+        />
+      
+        <div class="absolute right-3">
+          <ButtomDarkMode/>
+        </div>    
+    </header>
+
+    
+      <main
+      class="flex mt-10 justify-center items-center"
+      >
+        <CarruselBasic class="w-96"/>
+
+        <CardBasic/>
+    
+      </main>
+    
+  </body>
+
+
+
+
+    <!-- <Button>Click me</Button> -->
+
+    
 
 
  
