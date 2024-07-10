@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { BellRing, Check } from 'lucide-vue-next'
+import {Flame } from 'lucide-vue-next'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -10,65 +10,37 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import { Switch } from '@/components/ui/switch'
 import { cn } from '@/lib/utils'
 
-const notifications = [
-  {
-    title: 'Your call has been confirmed.',
-    description: '1 hour ago',
-  },
-  {
-    title: 'You have a new message!',
-    description: '1 hour ago',
-  },
-  {
-    title: 'Your subscription is expiring soon!',
-    description: '2 hours ago',
-  },
-]
 </script>
 
 <template>
-  <Card :class="cn('w-[380px]', $attrs.class ?? '')">
-    <CardHeader>
-      <CardTitle>Notifications</CardTitle>
-      <CardDescription>You have 3 unread messages.</CardDescription>
+  <Card class="w-[340px] ">
+    <CardHeader class="px-4 py-0">
+      <CardTitle
+        class="inline-flex justify-center">
+        
+        <slot>
+
+
+        </slot>
+      </CardTitle>
+      <CardDescription>Mariño verde</CardDescription>
     </CardHeader>
-    <CardContent class="grid gap-4">
-      <div class=" flex items-center space-x-4 rounded-md border p-4">
-        <BellRing />
+
+    <CardContent class="grid gap-1">
+      <div class=" flex justify-center space-x-4 rounded-md border">
         <div class="flex-1 space-y-1">
-          <p class="text-sm font-medium leading-none">
-            Push Notifications
-          </p>
-          <p class="text-sm text-muted-foreground">
-            Send notifications to device.
-          </p>
+          <img src="https://ultimasnoticias.com.ve/wp-content/uploads/2021/11/IMG_27112021_152148_768_x_573_pixel.jpg" alt="Descripción de la imagen">
         </div>
-        <Switch />
-      </div>
-      <div>
-        <div
-          v-for="(notification, index) in notifications" :key="index"
-          class="mb-4 grid grid-cols-[25px_minmax(0,1fr)] items-start pb-4 last:mb-0 last:pb-0"
-        >
-          <span class="flex h-2 w-2 translate-y-1 rounded-full bg-sky-500" />
-          <div class="space-y-1">
-            <p class="text-sm font-medium leading-none">
-              {{ notification.title }}
-            </p>
-            <p class="text-sm text-muted-foreground">
-              {{ notification.description }}
-            </p>
-          </div>
-        </div>
+        
       </div>
     </CardContent>
     <CardFooter>
       <Button class="w-full">
-        <Check class="mr-2 h-4 w-4" /> Mark all as read
+        Clear all notifications
       </Button>
     </CardFooter>
   </Card>
 </template>
+

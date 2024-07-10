@@ -1,27 +1,38 @@
 <script setup lang="ts">
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import { Card, CardContent } from '@/components/ui/card'
+import Autoplay from "embla-carousel-autoplay"
+
+
+const plugin = Autoplay({
+  delay: 5000,
+  stopOnMouseEnter: true,
+  stopOnInteraction: false,
+})
 </script>
 
 <template>
   <Carousel
-    class="relative w-full max-w-sm"
+    :plugins="[
+      plugin
+    ]"
+    class="lg:max-w-full sm:max-w-xs bg-red-400"
     :opts="{
       align: 'start',
     }"
   >
-    <CarouselContent class="-ml-1">
-      <CarouselItem v-for="(_, index) in 5" :key="index" class="pl-1 md:basis-1/2 lg:basis-1/3">
+    <CarouselContent class="-ml-1 ">
+      <CarouselItem  v-for="(_, index) in 10" :key="index" class="pl-1 md:basis-1/2 lg:basis-1/3  ">
         <div class="p-1">
-          <Card>
-            <CardContent class="flex aspect-square items-center justify-center p-6">
+          <Card class="bg-purple-500">
+            <CardContent class="flex aspect-square items-center justify-center p-10 ">
               <span class="text-2xl font-semibold">{{ index + 1 }}</span>
             </CardContent>
           </Card>
         </div>
       </CarouselItem>
     </CarouselContent>
-    <CarouselPrevious />
-    <CarouselNext />
+    <CarouselPrevious class="hidden md:flex"/>
+    <CarouselNext class="hidden md:flex"/>
   </Carousel>
 </template>

@@ -4,6 +4,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import { Button } from '@/components/ui/button'
 import ButtomDarkMode from '@/components/darkMode/ButtomDarkMode.vue'
 import MenuDrop from './components/menu/menuDrop.vue'
+import { Separator } from '@/components/ui/separator'
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -17,29 +18,38 @@ import {
 } from '@/components/ui/navigation-menu'
 import CarruselBasic from './components/carrusel/CarruselBasic.vue'
 import CardBasic from './components/card/CardBasic.vue'
+import { Flame, } from 'lucide-vue-next'
 
 </script>
 
 <template>
-  <body class="flex flex-col max-w-screen-xl px-8 bg-red-500 min-h-screen">
+  <body class="flex flex-col mx-auto max-w-screen-xl px-4 bg-red-500 min-h-screen">
     
-    <header class="flex justify-center items-center">
-        <MenuDrop
-        />
+    <header class="flex justify-center items-center bg-green-400">
+      <MenuDrop/>
       
-        <div class="absolute right-3">
-          <ButtomDarkMode/>
-        </div>    
+        <div class="absolute  left-0 top-0 lg:left-5">
+          <ButtomDarkMode class="h-10 bg-green-950"/>
+        </div>
     </header>
 
     
       <main
-      class="flex mt-10 justify-center items-center"
+      class="flex flex-col mt-10 justify-center items-center bg-blue-500"
       >
-        <CarruselBasic class="w-96"/>
+        <CarruselBasic class="w-[80%] bg-yellow-300 " />
+        
+        <Separator class="my-4"/>
+        <div class="flex justify-center flex-wrap gap-10">
+          <CardBasic>
+            <Flame color="#ce0d0d" class="" />
+            ULTIMO EVENTO
+          </CardBasic>
 
-        <CardBasic/>
-    
+          <CardBasic>
+           PRÓXIMO EVENTO
+          </CardBasic>
+        </div>
       </main>
     
   </body>
@@ -48,9 +58,6 @@ import CardBasic from './components/card/CardBasic.vue'
 
 
     <!-- <Button>Click me</Button> -->
-
-    
-
 
  
 </template>
