@@ -15,10 +15,10 @@ import { cn } from '@/lib/utils'
 </script>
 
 <template>
-  <Card class="w-[340px] ">
+  <Card class="w-[240px] ">
     <CardHeader class="px-4 py-0">
       <CardTitle
-        class="inline-flex justify-center">
+        class=" text-base flex justify-center">
         
         <slot>
 
@@ -28,18 +28,17 @@ import { cn } from '@/lib/utils'
       <CardDescription>Mariño verde</CardDescription>
     </CardHeader>
 
-    <CardContent class="grid gap-1">
-      <div class=" flex justify-center space-x-4 rounded-md border">
+    <CardContent class=" gap-1 group flex justify-center text-center relative overflow-hidden rounded-md cursor-pointer">
         <div class="flex-1 space-y-1">
-          <img src="https://ultimasnoticias.com.ve/wp-content/uploads/2021/11/IMG_27112021_152148_768_x_573_pixel.jpg" alt="Descripción de la imagen">
+          <img 
+            class="rounded-md object-cover ease-in-out duration-500 group-hover:rotate-6 group-hover:scale-125"
+          src="https://ultimasnoticias.com.ve/wp-content/uploads/2021/11/IMG_27112021_152148_768_x_573_pixel.jpg" alt="Descripción de la imagen">
         </div>
-        
-      </div>
     </CardContent>
     <CardFooter>
-      <Button class="w-full">
-        Clear all notifications
-      </Button>
+   
+        Bella Catedral lorem lorem lorem lorem lorem
+
     </CardFooter>
   </Card>
 </template>

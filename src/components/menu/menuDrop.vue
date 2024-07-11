@@ -54,7 +54,7 @@ const components: { title: string, href: string, description: string }[] = [
       <NavigationMenuItem>
         <NavigationMenuTrigger>Eventos</NavigationMenuTrigger>
         <NavigationMenuContent>
-          <ul class="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[minmax(0,.75fr)_minmax(0,1fr)]">
+          <ul class="grid gap-3 p-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[minmax(0,.75fr)_minmax(0,1fr)]">
             <li class="row-span-3">
               <NavigationMenuLink as-child>
                 <a
@@ -118,7 +118,7 @@ const components: { title: string, href: string, description: string }[] = [
       <NavigationMenuItem >
         <NavigationMenuTrigger>Noticias</NavigationMenuTrigger>
         <NavigationMenuContent >
-          <ul class="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+          <ul class="grid w-[300px] gap-3 p-2 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
             <li v-for="component in components" :key="component.title">
               <NavigationMenuLink as-child>
                 <a
