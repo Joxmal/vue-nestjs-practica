@@ -15,7 +15,7 @@ import { cn } from '@/lib/utils'
 </script>
 
 <template>
-  <Card class="w-[240px] ">
+  <Card class="sm:w-full md:w-[340px]  lg:w-[240px] ">
     <CardHeader class="px-4 py-0">
       <CardTitle
         class=" text-base flex justify-center">
