@@ -21,6 +21,7 @@ const handleComplete = (e: string[]) => {
 <template>
   <div>
     <PinInput
+      type="number"
       id="pin-input"
       v-model="value"
       placeholder="○"
@@ -29,7 +30,7 @@ const handleComplete = (e: string[]) => {
       <PinInputGroup class="gap-1">
         <template v-for="(id, index) in 5" :key="id">
           <PinInputInput
-            class="rounded-md border"
+            class="rounded-md border passw"
             :index="index"
           />
           <template v-if="index !== 4">

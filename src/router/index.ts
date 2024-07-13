@@ -22,14 +22,19 @@ const router = createRouter({
       name: 'admin',
       component: () => import('../views/admin/login.vue')
     },
-    { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
-
+    
     { 
-      path: '/admin/dasboard',
+      path: '/admin',
       name: 'admin',
-      component: () => import('../views/admin/login.vue')
-    }
-
+      component: () => import('../views/admin/login.vue'),
+    },
+    {
+      path: '/admin/dashboard',
+      name: 'adminDashboard',
+      component: () => import('../views/admin/dasboard/Index.vue')
+    },
+    
+    { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
   ]
 })
 
